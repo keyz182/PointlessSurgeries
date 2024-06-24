@@ -195,10 +195,10 @@
         <stages>
             <li>
                 <statOffsets>
-                    <SocialImpact>-0.05</SocialImpact>
+                    <SocialImpact>-0.15</SocialImpact>
                     <PawnBeauty>5</PawnBeauty>
                 </statOffsets>
-                <partEfficiencyOffset>-0.90</partEfficiencyOffset>
+                <partEfficiencyOffset>-0.10</partEfficiencyOffset>
             </li>
         </stages>
         <comps>
