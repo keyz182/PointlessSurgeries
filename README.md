@@ -1,4 +1,4 @@
-<p>
+<!-- <p>
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=YOUR_WORKSHOP_ITEM_ID" alt="Steam Workshop Link">
   <img src="https://img.shields.io/static/v1?label=Steam&message=Workshop&color=blue&logo=steam&link=https://steamcommunity.com/sharedfiles/filedetails/?id=YOUR_WORKSHOP_ITEM_ID"/>
   </a>
@@ -10,6 +10,7 @@
 
 # Example Steam Workshop Template
 ```
+
 [h1]Pointless Surgeries[/h1]
 
 A set of pointless surgeries
@@ -26,6 +27,7 @@ Portions of the materials used to create this content/mod are trademarks and/or 
 [url=https://github.com/keyz182/Pointless-Surgeries][img]https://img.shields.io/static/v1?label=Pointless%20Surgeries&message=Fork%20me%20on%20github&color=d2e885&logo=github[/img][/url]
 ```
 
+-->
 # Pointless Surgeries
 
 A set of pointless surgeries
@@ -36,3 +38,16 @@ Portions of the materials used to create this content/mod are trademarks and/or 
 ## Thanks
 * Ludeon for the Game
 * Marnador for the [Rimworld Font](https://github.com/spdskatr/RWModdingResources/raw/master/RimWordFont.ttf)
+
+#TODO
+
+* Computer for social media that gives recreation, but temporary smooth brain
+  * Could I interest you in everything?
+  * All of the time?
+  * A little bit of everything
+  * All of the time
+  * Apathy's a tragedy
+  * And boredom is a crime
+  * Anything and everything
+  * All of the time
+* Plantable cucumbers - for pickling with chemfuel - soft dep on vanilla plants expanded, otherwise leave craftable

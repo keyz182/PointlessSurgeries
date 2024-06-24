@@ -1,6 +1,6 @@
-﻿using Verse;
+﻿using HarmonyLib;
 using UnityEngine;
-using HarmonyLib;
+using Verse;
 
 namespace Pointless_Surgeries;
 
@@ -17,7 +17,7 @@ public class Pointless_SurgeriesMod : Mod
 #if DEBUG
         Harmony.DEBUG = true;
 #endif
-        Harmony harmony = new Harmony("keyz182.rimworld.Pointless_Surgeries.main");	
+        var harmony = new Harmony("keyz182.rimworld.Pointless_Surgeries.main");
         harmony.PatchAll();
     }
 

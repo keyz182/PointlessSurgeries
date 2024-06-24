@@ -1,9 +1,9 @@
-﻿using System.Diagnostics;
-using System;
+﻿using System;
+using System.Diagnostics;
 
 namespace Pointless_Surgeries;
 
-static class ModLog
+internal static class ModLog
 {
     [Conditional("DEBUG")]
     public static void Debug(string x)
@@ -27,5 +27,4 @@ static class ModLog
         if (e != null)
             Verse.Log.Error(e.ToString());
     }
-
 }

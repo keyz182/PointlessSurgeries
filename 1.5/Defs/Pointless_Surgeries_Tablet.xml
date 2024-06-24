@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="BookBase">
+        <thingClass>Pointless_Surgeries.PS_Tablet</thingClass>
+        <defName>PS_Tablet</defName>
+        <label>tablet</label>
+        <description>A small tablet for persusing social media.\n\nCould I interest you in everything?\nAll of the time?\nA little bit of everything\nAll of the time\nApathy's a tragedy\nAnd boredom is a crime\nAnything and everything\nAll of the time</description>
+        <graphicData>
+            <texPath>Things/PS_Tablet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <uiIconPath>Things/PS_Tablet</uiIconPath>
+        <statBases>
+            <MarketValue>250</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Book">
+                <nameMaker>PS_Name_Tablet</nameMaker>
+                <descriptionMaker>PS_Description_Tablet</descriptionMaker>
+                <ageYearsRange>500~2000</ageYearsRange>
+                <openGraphic>
+                    <texPath>Things/PS_Tablet</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <drawSize>0.7</drawSize>
+                </openGraphic>
+                <verticalGraphic>
+                    <texPath>Things/PS_Tablet</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <addTopAltitudeBias>true</addTopAltitudeBias>
+                </verticalGraphic>
+                <doers>
+                    <li Class="Pointless_Surgeries.BookOutcomeProperties_TabletModifier">
+                        <hediffDef>SmoothBrainTemp</hediffDef>
+                    </li>
+                </doers>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <RulePackDef>
+        <defName>PS_Description_Tablet</defName>
+        <include>
+            <li>ArtDescriptionUtility_Global</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>desc->A standard media tablet.</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>PS_Name_Tablet</defName>
+        <include>
+            <li>ArtDescriptionUtility_Global</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>title->Media Tablet</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <HediffDef>
+        <defName>SmoothBrainTemp</defName>
+        <label>smoothbrain</label>
+        <labelNoun>a smooth brain</labelNoun>
+        <description>A nice smooth brain. Social media has filled in those pesky wrinkles, leaving the pawn in an ignorant bliss.</description>
+        <hediffClass>Hediff_Hangover</hediffClass>
+        <initialSeverity>1</initialSeverity>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <minSeverity>0</minSeverity>
+                <label>slight</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.15</minSeverity>
+                <label>strong</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+            <!-- starts low because it isn't visible until alcohol hediff is gone-->
+            <li>
+                <minSeverity>0.40</minSeverity>
+                <label>extreme</label>
+                <vomitMtbDays>0.4</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.35</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

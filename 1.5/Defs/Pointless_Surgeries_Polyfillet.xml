@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThoughtDef>
+        <defName>AtePolyFillet</defName>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>eugh, i ate polyfillet</label>
+                <description>eugh, i ate polyfillet. yuck!</description>
+                <baseMoodEffect>-7</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>AteFineMeal</li>
+            <li>AteLavishMeal</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+
+    <RecipeDef>
+        <defName>PolyFillet</defName>
+        <label>polyfillet</label>
+        <description>Polyfillet - a smooth paste required to smooth out those pesky brain wrinkles. Technically edible.</description>
+        <jobString>Making cucumber.</jobString>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallPolyFillet</RecipeDef>
+        </descriptionHyperlinks>
+
+        <workAmount>200</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+
+        <products>
+            <PolyFillet>1</PolyFillet>
+        </products>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <customSummary>protein</customSummary>
+                    <categories>
+                        <li>MeatRaw</li>
+                        <li>AnimalProductRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+        </fixedIngredientFilter>
+
+        <defaultIngredientFilter>
+            <categories>
+                <li>Foods</li>
+            </categories>
+            <disallowedCategories>
+                <li>EggsFertilized</li>
+            </disallowedCategories>
+            <disallowedThingDefs>
+                <li>InsectJelly</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+
+        <workSkill>Cooking</workSkill>
+        <displayPriority>1440</displayPriority>
+        <recipeUsers>
+            <li>Campfire</li>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <ThingDef ParentName="MealCooked">
+        <defName>PolyFillet</defName>
+        <label>polyfillet</label>
+        <description>Polyfillet - a smooth paste required to smooth out those pesky brain wrinkles. Technically edible.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallPolyFillet</RecipeDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/polyfillet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <WorkToMake>300</WorkToMake>
+            <Nutrition>0.1</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>RawBad</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+            <tasteThought>AtePolyFillet</tasteThought>
+            <foodType>Processed</foodType>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Ingredients">
+                <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <RecipeDef ParentName="CucumberBase">
+        <defName>CookPolyfillet</defName>
+        <label>cook polyfillet</label>
+        <description>Cook up a new batch of polyfillet.</description>
+        <jobString>Cooking up a new batch of polyfillet.</jobString>
+        <workAmount>200</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <products>
+            <PolyFillet>1</PolyFillet>
+        </products>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>0.75</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <disallowedCategories>
+                <li>PlantFoodRaw</li>
+                <li>AnimalProductRaw</li>
+            </disallowedCategories>
+        </fixedIngredientFilter>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>105</displayPriority>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+    </RecipeDef>
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>SmoothBrain</defName>
+        <label>smoothbrain</label>
+        <labelNoun>a smooth brain</labelNoun>
+        <description>A nice smooth brain. The polyfillet has filled in those pesky wrinkles, leaving the pawn in an ignorant bliss.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PolyFillet</ThingDef>
+        </descriptionHyperlinks>
+        <stages>
+            <li>
+                <disabledWorkTags>
+                    <li>AllWork</li>
+                </disabledWorkTags>
+                <statOffsets>
+                    <GlobalLearningFactor>-0.8</GlobalLearningFactor>
+                </statOffsets>
+                <partEfficiencyOffset>-0.50</partEfficiencyOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>SmoothBrainThought</thought>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>PolyFillet</spawnThingOnRemoved>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallPolyFillet</defName>
+        <label>smooth brain</label>
+        <description>smooth out the brain.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PolyFillet</ThingDef>
+            <HediffDef>SmoothBrain</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Smoothing out the brain.</jobString>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>PolyFillet</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>PolyFillet</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>SmoothBrain</addsHediff>
+    </RecipeDef>
+
+    <ThoughtDef>
+        <defName>SmoothBrainThought</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SmoothBrain</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>smoothbrain</label>
+                <description>I umm, yeah.</description>
+                <baseMoodEffect>25</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ResearchProjectDef>
+        <defName>PointlessSurgeries</defName>
+        <label>Pointless Surgeries</label>
+        <description>Pointless surgeries. Brain smoothing, healing crystals, bloodletting.</description>
+        <baseCost>300</baseCost>
+        <techLevel>Animal</techLevel>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->polyfillet</li>
+
+                <li>subject_story->wrote a note about a smooth meat paste they made</li>
+                <li>subject_story->noted that the meat paste nicely fills in brain wrinkles</li>
+
+                <li>subject_gerund->crafting polyfillet</li>
+
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+</Defs>

@@ -12,13 +12,13 @@ public class Settings : ModSettings
     {
         var options = new Listing_Standard();
         options.Begin(wrect);
-        
+
         options.CheckboxLabeled("Pointless Surgeries_Settings_SettingName".Translate(), ref setting);
         options.Gap();
 
         options.End();
     }
-    
+
     public override void ExposeData()
     {
         Scribe_Values.Look(ref setting, "setting", true);

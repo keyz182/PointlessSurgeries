@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="MedicineBase">
+        <defName>MedicineHealingCrystals</defName>
+        <label>healing crystals</label>
+        <description>A pack of healing crystals someone found on the ground. Some people say they have healing properties. Unrelated, some people are idiots.</description>
+        <possessionCount>4</possessionCount>
+        <graphicData>
+            <texPath>Things/PS_Crystals</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <techLevel>Neolithic</techLevel>
+        <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
+
+        <costList>
+            <ChunkMarble>1</ChunkMarble>
+        </costList>
+
+        <recipeMaker>
+            <productCount>5</productCount>
+            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <recipeUsers>
+                <li>Campfire</li>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+            </recipeUsers>
+            <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+            <workSkill>Cooking</workSkill>
+            <skillRequirements>
+                <Cooking>2</Cooking>
+            </skillRequirements>
+            <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+            <displayPriority>1460</displayPriority>
+        </recipeMaker>
+
+        <statBases>
+            <MarketValue>2</MarketValue>
+            <Mass>0.7</Mass>
+            <Flammability>0.1</Flammability>
+            <MedicalPotency>0.01</MedicalPotency>
+            <MedicalQualityMax>0.10</MedicalQualityMax>
+        </statBases>
+        <tickerType>Rare</tickerType>
+        <comps>
+        </comps>
+        <allowedArchonexusCount>20</allowedArchonexusCount>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="MedicineBase">
+        <defName>MedicineEssentialOils</defName>
+        <label>essential oils</label>
+        <description>A vial of "essential oils". It's just chemfuel. The "essential" in "essential oils" is not from the meaning "absolutely necessary; extremely important", but rather from "essence, an extract or concentrate".</description>
+        <possessionCount>4</possessionCount>
+        <graphicData>
+            <texPath>Things/PS_EssentialOils</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <techLevel>Neolithic</techLevel>
+        <costList>
+            <Chemfuel>10</Chemfuel>
+        </costList>
+        <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
+
+        <recipeMaker>
+            <productCount>5</productCount>
+            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <recipeUsers>
+                <li>Campfire</li>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+            </recipeUsers>
+            <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+            <workSkill>Cooking</workSkill>
+            <skillRequirements>
+                <Cooking>2</Cooking>
+            </skillRequirements>
+            <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+            <displayPriority>1460</displayPriority>
+        </recipeMaker>
+
+        <statBases>
+            <MarketValue>2</MarketValue>
+            <Mass>0.7</Mass>
+            <Flammability>0.1</Flammability>
+            <MedicalPotency>0.05</MedicalPotency>
+            <MedicalQualityMax>0.40</MedicalQualityMax>
+        </statBases>
+        <tickerType>Rare</tickerType>
+        <allowedArchonexusCount>20</allowedArchonexusCount>
+    </ThingDef>
+</Defs>

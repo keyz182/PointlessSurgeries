@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="MealCooked">
+        <defName>Cucumber</defName>
+        <label>cucumber</label>
+        <description>A cucumber.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>Make_A_Cucumber</RecipeDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/PS_Cucumber</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <ingestible>
+            <preferability>RawBad</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <foodType>VegetableOrFruit</foodType>
+        </ingestible>
+        <statBases>
+            <MarketValue>5</MarketValue>
+            <WorkToMake>45</WorkToMake>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>30</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <RecipeDef Name="CucumberBase">
+        <defName>Make_A_Cucumber</defName>
+        <label>make a cucumber</label>
+        <description>Make a cucumber. This doesn't make sense at all. You can't just make a cucumber. Can you?</description>
+        <jobString>Making cucumber.</jobString>
+        <workAmount>200</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <products>
+            <Cucumber>1</Cucumber>
+        </products>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>PolyFillet</li>
+                    </thingDefs>
+                </filter>
+                <count>0.1</count>
+            </li>
+            <li>
+                <filter>
+                    <customSummary>vegetarian ingredients</customSummary>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>MeatRaw</li>
+                <li>EggsFertilized</li>
+            </disallowedCategories>
+        </fixedIngredientFilter>
+
+        <defaultIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>MeatRaw</li>
+                <li>EggsFertilized</li>
+            </disallowedCategories>
+        </defaultIngredientFilter>
+
+        <workSkill>Cooking</workSkill>
+        <displayPriority>1440</displayPriority>
+        <recipeUsers>
+            <li>Campfire</li>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+    </RecipeDef>
+
+
+    <ThingDef ParentName="MealCooked">
+        <defName>SuperCucumber</defName>
+        <label>super cucumber</label>
+        <description>A super cucumber.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>Make_A_Super_Cucumber</RecipeDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/PS_Supercucumber</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <foodType>VegetableOrFruit</foodType>
+        </ingestible>
+        <statBases>
+            <MarketValue>50</MarketValue>
+            <WorkToMake>150</WorkToMake>
+            <Nutrition>1</Nutrition>
+        </statBases>
+    </ThingDef>
+
+
+    <RecipeDef ParentName="CucumberBase">
+        <defName>Make_A_Super_Cucumber</defName>
+        <label>make a super cucumber</label>
+        <description>Make a super cucumber. No, this definately doesn't make sense.</description>
+        <jobString>Making super cucumber.</jobString>
+        <workAmount>500</workAmount>
+        <products>
+            <SuperCucumber>1</SuperCucumber>
+        </products>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Cucumber</li>
+                    </thingDefs>
+                </filter>
+                <count>0.2</count>
+            </li>
+            <li>
+                <filter>
+                    <customSummary>vegetarian ingredients</customSummary>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <displayPriority>1441</displayPriority>
+        <recipeUsers>
+            <li>Campfire</li>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>ImplantSuperCucumber</defName>
+        <label>implant super cucumber</label>
+        <description>Implants the super cucumber to, err, why are we doing this again?</description>
+        <jobString>Sucering that Cupumber right in there.</jobString>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <appliedOnFixedBodyParts>
+            <li>Pelvis</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>ImplantSuperCucumber</addsHediff>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SuperCucumber</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SuperCucumber</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <HediffDef>
+        <defName>ImplantSuperCucumber</defName>
+        <label>super cucumber</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person has a super cucumber implanted in them.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <descriptionHyperlinks>
+            <ThingDef>PolyFillet</ThingDef>
+        </descriptionHyperlinks>
+        <stages>
+            <li>
+                <disabledWorkTags>
+                    <li>AllWork</li>
+                </disabledWorkTags>
+                <statOffsets>
+                    <SocialImpact>-0.05</SocialImpact>
+                    <PawnBeauty>5</PawnBeauty>
+                </statOffsets>
+                <partEfficiencyOffset>-0.90</partEfficiencyOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>ImplantSuperCucumberThought</thought>
+            </li>
+            <li Class="HediffCompProperties_GiveLovinMTBFactor">
+                <lovinMTBFactor>0.5</lovinMTBFactor>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>SuperCucumber</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>ImplantSuperCucumberThought</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>ImplantSuperCucumber</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>I've got a Cuper Sucummer</label>
+                <description>I've got a sucer cumpumper? Supra Cusumper? Sumber Cubumber?</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

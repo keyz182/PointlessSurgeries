@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ModMetaData>
     <name>Pointless Surgeries</name>
     <author>keyz182</author>
@@ -8,7 +9,7 @@
     <packageId>keyz182.PointlessSurgeries</packageId>
     <description>A set of pointless surgeries</description>
     <url>https://steamcommunity.com/id/keyz182/myworkshopfiles/?appid=294100</url>
-	<modDependencies>
+    <modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>
             <displayName>Harmony</displayName>
