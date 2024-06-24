@@ -5,7 +5,7 @@
         <thingClass>Pointless_Surgeries.PS_Tablet</thingClass>
         <defName>PS_Tablet</defName>
         <label>tablet</label>
-        <description>A small tablet for persusing social media.\n\nCould I interest you in everything?\nAll of the time?\nA little bit of everything\nAll of the time\nApathy's a tragedy\nAnd boredom is a crime\nAnything and everything\nAll of the time</description>
+        <description>A small tablet for persusing social media.</description>
         <graphicData>
             <texPath>Things/PS_Tablet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -46,7 +46,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>desc->A standard media tablet.</li>
+                <li>desc->A standard media tablet.\n\nCould I interest you in everything?\nAll of the time?\nA little bit of everything\nAll of the time\nApathy's a tragedy\nAnd boredom is a crime\nAnything and everything\nAll of the time</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>

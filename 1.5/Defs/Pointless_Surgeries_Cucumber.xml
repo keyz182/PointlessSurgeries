@@ -194,9 +194,6 @@
         </descriptionHyperlinks>
         <stages>
             <li>
-                <disabledWorkTags>
-                    <li>AllWork</li>
-                </disabledWorkTags>
                 <statOffsets>
                     <SocialImpact>-0.05</SocialImpact>
                     <PawnBeauty>5</PawnBeauty>
