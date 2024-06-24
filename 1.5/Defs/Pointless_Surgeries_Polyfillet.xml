@@ -34,6 +34,9 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
 
         <products>
             <PolyFillet>1</PolyFillet>
@@ -142,9 +145,7 @@
         </fixedIngredientFilter>
         <workSkill>Cooking</workSkill>
         <displayPriority>105</displayPriority>
-        <researchPrerequisite>
-            <li>PointlessSurgeries</li>
-        </researchPrerequisite>
+        <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
     </RecipeDef>
 
     <HediffDef ParentName="ImplantHediffBase">

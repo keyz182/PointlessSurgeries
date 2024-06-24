@@ -42,6 +42,9 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
         <products>
             <Cucumber>1</Cucumber>
         </products>
@@ -123,6 +126,7 @@
         <label>make a super cucumber</label>
         <description>Make a super cucumber. No, this definately doesn't make sense.</description>
         <jobString>Making super cucumber.</jobString>
+        <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
         <workAmount>500</workAmount>
         <products>
             <SuperCucumber>1</SuperCucumber>
