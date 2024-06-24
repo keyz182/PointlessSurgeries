@@ -13,7 +13,7 @@ public class Settings : ModSettings
         var options = new Listing_Standard();
         options.Begin(wrect);
 
-        options.CheckboxLabeled("Pointless Surgeries_Settings_SettingName".Translate(), ref setting);
+        options.Label("PS_CheckBackLater");
         options.Gap();
 
         options.End();

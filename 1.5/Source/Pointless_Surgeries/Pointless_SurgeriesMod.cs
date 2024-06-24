@@ -29,6 +29,6 @@ public class Pointless_SurgeriesMod : Mod
 
     public override string SettingsCategory()
     {
-        return "Pointless Surgeries_SettingsCategory".Translate();
+        return "Pointless_Surgeries_SettingsCategory".Translate();
     }
 }
