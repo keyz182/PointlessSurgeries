@@ -27,6 +27,9 @@
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>true</showRemainingTime>
             </li>
+            <li Class="Pointless_Surgeries.HediffComp_HealRandomPermanentWoundSingle">
+                <chance>0.01</chance>
+            </li>
         </comps>
     </HediffDef>
 
