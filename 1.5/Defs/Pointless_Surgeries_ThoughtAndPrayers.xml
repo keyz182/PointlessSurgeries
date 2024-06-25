@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <RecipeDef Name="PSSurgeryBase" ParentName="SurgeryFlesh" Abstract="True">
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <workAmount>500</workAmount>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+        </recipeUsers>
+        <ingredients>
+        </ingredients>
+    </RecipeDef>
+    
+    <RecipeDef ParentName="PSSurgeryBase">
         <defName>ThoughtsAndPrayers</defName>
         <label>thoughts and prayers</label>
         <description>Thoughs and Prayers for the injured. Will it actually do anything?</description>
         <jobString>Thinking and praying.</jobString>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <isViolation>false</isViolation>
+        <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
         <researchPrerequisite>
             <li>PointlessSurgeries</li>
         </researchPrerequisite>
@@ -13,9 +32,8 @@
             <li>Brain</li>
         </appliedOnFixedBodyParts>
         <addsHediff>ThoughtsAndPrayers</addsHediff>
-        <ingredients />
     </RecipeDef>
-
+    
     <HediffDef>
         <defName>ThoughtsAndPrayers</defName>
         <label>thoughts and prayers</label>
@@ -27,8 +45,15 @@
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>true</showRemainingTime>
             </li>
+            <li Class="HediffCompProperties_ReplaceHediff">
+                <hediffs>
+                    <li>
+                        <hediff>ThoughtsAndPrayers</hediff>
+                    </li>
+                </hediffs>
+            </li>
             <li Class="Pointless_Surgeries.HediffCompProperties_HealRandomPermanentWoundSingle">
-                <chance>0.01</chance>
+                <chance>0.1</chance>
             </li>
         </comps>
     </HediffDef>

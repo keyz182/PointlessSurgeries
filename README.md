@@ -28,3 +28,4 @@ Portions of the materials used to create this content/mod are trademarks and/or 
 ## Thanks
 * Ludeon for the Game
 * Marnador for the [Rimworld Font](https://github.com/spdskatr/RWModdingResources/raw/master/RimWordFont.ttf)
+* Teslov on discord for the cucumber artwork
