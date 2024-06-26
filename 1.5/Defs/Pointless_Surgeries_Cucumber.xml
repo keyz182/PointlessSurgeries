@@ -218,8 +218,8 @@
 
     <ThoughtDef>
         <defName>ImplantSuperCucumberThought</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>ImplantSuperCucumber</hediff>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stackLimit>1</stackLimit>
         <validWhileDespawned>true</validWhileDespawned>
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>

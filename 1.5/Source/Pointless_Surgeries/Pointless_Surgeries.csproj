@@ -12,8 +12,8 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
-    <FileVersion>1.0.3</FileVersion>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <FileVersion>1.0.4</FileVersion>
     <Company>keyz182</Company>
     <Product>Pointless Surgeries</Product>
   </PropertyGroup>
@@ -92,6 +92,10 @@
     
     <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Tablet.xml">
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Tablet.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Hysteria.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Hysteria.xml</Link>
     </ReleaseFiles>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">

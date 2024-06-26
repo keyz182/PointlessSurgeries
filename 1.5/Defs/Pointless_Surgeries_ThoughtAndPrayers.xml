@@ -20,6 +20,7 @@
         <defName>ThoughtsAndPrayers</defName>
         <label>thoughts and prayers</label>
         <description>Thoughs and Prayers for the injured. Will it actually do anything?</description>
+        <anesthetize>false</anesthetize>
         <jobString>Thinking and praying.</jobString>
         <hideBodyPartNames>true</hideBodyPartNames>
         <isViolation>false</isViolation>
