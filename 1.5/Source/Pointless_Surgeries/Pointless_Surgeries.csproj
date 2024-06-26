@@ -100,10 +100,6 @@
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Tablet.xml</Link>
     </ReleaseFiles>
     
-    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Hysteria.xml">
-      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Hysteria.xml</Link>
-    </ReleaseFiles>
-    
     <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Trepanation.xml">
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Trepanation.xml</Link>
     </ReleaseFiles>
