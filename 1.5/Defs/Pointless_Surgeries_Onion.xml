@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <RecipeDef ParentName="PSSurgeryBase">
+        <defName>AdministerOnion</defName>
+        <label>administer onion</label>
+        <description>Administer an onion to the patient.</description>
+        <workerClass>Recipe_AddHediff</workerClass>
+        <addsHediff>OnionAdministered</addsHediff>
+        <jobString>Administering onion to TargetA.</jobString>
+        <workAmount>1200</workAmount>
+        <anesthetize>false</anesthetize>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <isViolation>false</isViolation>
+        <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li MayRequire="VanillaExpanded.VPlantsE">
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Onion</li>
+                    </thingDefs>
+                </filter>
+                <count>0.2</count>
+            </li>
+        </ingredients>
+    </RecipeDef>
+    
+    <HediffDef>
+        <defName>OnionAdministered</defName>
+        <label>onion administered</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person had an onion administered. They stink.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.1</InjuryHealingFactor>
+                    <SocialImpact>-0.15</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks> 
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>OnionAdministeredThought</thought>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>OnionAdministeredThought</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stackLimit>1</stackLimit>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>I stink of onions</label>
+                <description>I stink of onions</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

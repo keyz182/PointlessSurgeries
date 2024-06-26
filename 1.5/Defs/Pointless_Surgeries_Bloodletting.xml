@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-    <RecipeDef ParentName="SurgeryFlesh">
+    <RecipeDef ParentName="PSSurgeryBase">
         <defName>Bloodletting</defName>
         <label>bloodletting</label>
         <description>Release some blood from the patient to, err, balance the humours or something? I don't know! What do I look like, some kind of medical practitioner?</description>

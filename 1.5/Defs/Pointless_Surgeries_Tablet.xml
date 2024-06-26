@@ -15,6 +15,12 @@
         <statBases>
             <MarketValue>250</MarketValue>
         </statBases>
+        <techLevel>Neolithic</techLevel>
+        <tradeability>All</tradeability>
+        <tradeTags>
+            <li>TechHediff</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
         <comps>
             <li Class="CompProperties_Book">
                 <nameMaker>PS_Name_Tablet</nameMaker>

@@ -11,6 +11,7 @@ public static class Pointless_SurgeriesDefOf
     // public static GeneDef YourPrefix_YourGeneDefName;
     public static ThingDef MedicineEssentialOils;
     public static ThingDef MedicineHealingCrystals;
+    public static ThingDef HomeRemedy;
     public static ThoughtDef ImplantSuperCucumberThought;
     public static ThoughtDef ThoughtsAndPrayersThought;
     public static ThoughtDef SmoothBrainThought;

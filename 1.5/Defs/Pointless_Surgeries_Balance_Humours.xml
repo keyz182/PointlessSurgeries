@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <RecipeDef ParentName="PSSurgeryBase">
+        <defName>BalanceHumours</defName>
+        <label>balance humours</label>
+        <description>Use leeches to balance the humours.</description>
+        <workerClass>Recipe_AddHediff</workerClass>
+        <addsHediff>HumoursBalanced</addsHediff>
+        <jobString>Balancing the humours for TargetA.</jobString>
+        <workAmount>1200</workAmount>
+        <anesthetize>false</anesthetize>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <isViolation>false</isViolation>
+        <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <ingredients/>
+    </RecipeDef>
+    
+    <HediffDef>
+        <defName>HumoursBalanced</defName>
+        <label>humours balanced</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person had their humours balanced.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.1</InjuryHealingFactor>
+                    <SocialImpact>-0.15</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks> 
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="Pointless_Surgeries.HediffCompProperties_MultipleThoughtSetter">
+                <thoughts>
+                    <li>HumoursBalancedThought</li>
+                    <li>HumoursBalancedLeechesThought</li>
+                </thoughts>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>HumoursBalancedThought</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stackLimit>1</stackLimit>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>My humours have been balanced</label>
+                <description>My humours have been balanced</description>
+                <baseMoodEffect>1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>HumoursBalancedLeechesThought</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stackLimit>1</stackLimit>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>Eww, Leeches</label>
+                <description>They're gross!</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

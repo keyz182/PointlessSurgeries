@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <RecipeDef ParentName="PSSurgeryBase">
+        <defName>Trepanning</defName>
+        <label>trepanning</label>
+        <description>Smash a hole in the patients head.</description>
+        <workerClass>Recipe_AddHediff</workerClass>
+        <addsHediff>Treppanned</addsHediff>
+        <jobString>Smashing a hole in TargetA.</jobString>
+        <workAmount>1200</workAmount>
+        <anesthetize>false</anesthetize>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <isViolation>true</isViolation>
+        <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>0.1</surgerySuccessChanceFactor>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MeleeWeapon_Club</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+    </RecipeDef>
+    
+    <HediffDef>
+        <defName>Treppanned</defName>
+        <label>treppanned</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person has a hole in their head.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MoveSpeed>-1</MoveSpeed>
+                    <CrawlSpeed>-1</CrawlSpeed>
+                    <EatingSpeed>-1</EatingSpeed>
+                    <LifespanFactor>-0.5</LifespanFactor>
+                    <ImmunityGainSpeed>-0.5</ImmunityGainSpeed>
+                    <MentalBreakThreshold>1</MentalBreakThreshold>
+                    <PsychicSensitivity>1</PsychicSensitivity>
+                    <GlobalLearningFactor>-1</GlobalLearningFactor>
+                    <SocialImpact>-0.15</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600000</disappearsAfterTicks> 
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>HumoursBalancedLeechesThought</thought>
+            </li>
+            <li Class="Pointless_Surgeries.HediffCompProperties_HealRandomPermanentWoundSingle">
+                <chance>1</chance>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>TreppannedThought</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stackLimit>1</stackLimit>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>I've been treppaned</label>
+                <description>I needed that like I need a hole in the head. Wait.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

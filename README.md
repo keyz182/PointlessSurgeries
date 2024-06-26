@@ -15,6 +15,11 @@ A set of pointless surgeries and things. For the memes.
 - A Tablet - Who doesn't want to endlessly doomscroll and end up with acute smooth-brain?
 - Polyfillet - An amazing compound capable of smoothing out the wrinkliest of brains. Applied via surgery.
 - Super Cucumber - What more is there to say.
+- Trepanning - high chance to kill the pawn. Low chance to heal a permanent injury
+- Administer Onion - why do I smell like onions now?
+- Balance the humours - eww, leeches.
+- "Vaccine" - it's got microchips in it
+- Home Remedy - Yayo, Beer, and Herbal Medicine, all in one
 - And more...
 
 ## ToDo
@@ -22,14 +27,16 @@ A set of pointless surgeries and things. For the memes.
 - Vanilla Plants Expanded compat for 🥒
   - pickles
 - Fing-Longer
-- Trepanning
-- Balance the humours
-  - leeches
-- medicines that are just yayo + booze
 - birds are drones
-- 5G vaccine
-- Administer onion
 - Stem cell surgery, chance for complete heal of any condition, but also a chance for a random body part to get cancer/get tentacled (if anomaly)
+- Bracelets
+  - Magnetic
+  - Copper
+  - etc
+- Manifest Destiny ability
+  - Sets all skills to 20 
+  - Huge, mapwide antigrain explosion, destroy most of the map
+  - Gives them Luci addiction
 
 
 ## Disclaimer

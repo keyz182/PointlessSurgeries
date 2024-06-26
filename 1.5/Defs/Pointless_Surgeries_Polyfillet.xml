@@ -17,71 +17,6 @@
         </replaceThoughts>
     </ThoughtDef>
 
-
-    <RecipeDef>
-        <defName>PolyFillet</defName>
-        <label>polyfillet</label>
-        <description>Polyfillet - a smooth paste required to smooth out those pesky brain wrinkles. Technically edible.</description>
-        <jobString>Making cucumber.</jobString>
-        <descriptionHyperlinks>
-            <RecipeDef>InstallPolyFillet</RecipeDef>
-        </descriptionHyperlinks>
-
-        <workAmount>200</workAmount>
-        <workSpeedStat>CookSpeed</workSpeedStat>
-        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-        <researchPrerequisite>
-            <li>PointlessSurgeries</li>
-        </researchPrerequisite>
-
-        <products>
-            <PolyFillet>1</PolyFillet>
-        </products>
-
-        <ingredients>
-            <li>
-                <filter>
-                    <customSummary>protein</customSummary>
-                    <categories>
-                        <li>MeatRaw</li>
-                        <li>AnimalProductRaw</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-
-        <fixedIngredientFilter>
-            <categories>
-                <li>FoodRaw</li>
-            </categories>
-        </fixedIngredientFilter>
-
-        <defaultIngredientFilter>
-            <categories>
-                <li>Foods</li>
-            </categories>
-            <disallowedCategories>
-                <li>EggsFertilized</li>
-            </disallowedCategories>
-            <disallowedThingDefs>
-                <li>InsectJelly</li>
-            </disallowedThingDefs>
-        </defaultIngredientFilter>
-
-        <workSkill>Cooking</workSkill>
-        <displayPriority>1440</displayPriority>
-        <recipeUsers>
-            <li>Campfire</li>
-            <li>ElectricStove</li>
-            <li>FueledStove</li>
-        </recipeUsers>
-    </RecipeDef>
-
     <ThingDef ParentName="MealCooked">
         <defName>PolyFillet</defName>
         <label>polyfillet</label>
@@ -111,41 +46,63 @@
             </li>
         </comps>
     </ThingDef>
-
-    <RecipeDef ParentName="CucumberBase">
+    
+    <RecipeDef>
         <defName>CookPolyfillet</defName>
         <label>cook polyfillet</label>
         <description>Cook up a new batch of polyfillet.</description>
         <jobString>Cooking up a new batch of polyfillet.</jobString>
         <workAmount>200</workAmount>
         <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
         <products>
-            <PolyFillet>1</PolyFillet>
+            <PolyFillet>16</PolyFillet>
         </products>
         <ingredients>
             <li>
                 <filter>
+                    <customSummary>vegetarian ingredients</customSummary>
                     <categories>
-                        <li>MeatRaw</li>
+                        <li>PlantFoodRaw</li>
                     </categories>
                 </filter>
-                <count>0.75</count>
+                <count>0.1</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <disallowedCategories>
+            <categories>
                 <li>PlantFoodRaw</li>
-                <li>AnimalProductRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>MeatRaw</li>
+                <li>EggsFertilized</li>
             </disallowedCategories>
         </fixedIngredientFilter>
+
+        <defaultIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>MeatRaw</li>
+                <li>EggsFertilized</li>
+            </disallowedCategories>
+        </defaultIngredientFilter>
+
         <workSkill>Cooking</workSkill>
-        <displayPriority>105</displayPriority>
-        <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+        <displayPriority>1443</displayPriority>
+        <recipeUsers>
+            <li>Campfire</li>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
     </RecipeDef>
 
     <HediffDef ParentName="ImplantHediffBase">

@@ -22,6 +22,29 @@ public static class TendUtility_Patch
         else if (medicine.def == Pointless_SurgeriesDefOf.MedicineHealingCrystals)
         {
             chance = 0.001f;
+        }else if (medicine.def == Pointless_SurgeriesDefOf.HomeRemedy)
+        {
+            var alchohol = patient.health.GetOrAddHediff(HediffDefOf.AlcoholHigh);
+            alchohol.Severity += 0.016f;
+            
+            var alcoholToleranceDef = DefDatabase<HediffDef>.GetNamed("AlcoholTolerance");
+            if (alcoholToleranceDef != null)
+            {
+                var alcoholTolerance = patient.health.GetOrAddHediff(alcoholToleranceDef);
+                alcoholTolerance.Severity += 0.016f;
+            }
+
+            var yayodef = DefDatabase<HediffDef>.GetNamed("YayoHigh");
+            var yayo = patient.health.GetOrAddHediff(yayodef);
+            yayo.Severity += 0.75f;
+
+            var psychiteToleranceDef = DefDatabase<HediffDef>.GetNamed("PsychiteTolerance");
+            if (psychiteToleranceDef != null)
+            {
+                var psychiteTolerance = patient.health.GetOrAddHediff(psychiteToleranceDef);
+                psychiteTolerance.Severity += 0.04f;
+            }
+            return;
         }
 
         if (!Rand.Chance(chance)) return;

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="MedicineBase">
+        <defName>Vaccine</defName>
+        <label>"Vaccine"</label>
+        <description>A "vaccine". Why does it look like there's electronics in there?</description>
+        <possessionCount>4</possessionCount>
+        <graphicData>
+            <texPath>Things/PS_Vaccine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <techLevel>Neolithic</techLevel>
+        <costList>
+            <Chemfuel>10</Chemfuel>
+            <ComponentIndustrial>10</ComponentIndustrial>
+        </costList>
+        <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
+
+        <recipeMaker>
+            <productCount>5</productCount>
+            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <recipeUsers>
+                <li>Campfire</li>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+            </recipeUsers>
+            <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+            <workSkill>Cooking</workSkill>
+            <skillRequirements>
+                <Cooking>2</Cooking>
+            </skillRequirements>
+            <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+            <displayPriority>1460</displayPriority>
+        </recipeMaker>
+
+        <statBases>
+            <MarketValue>2</MarketValue>
+            <Mass>0.7</Mass>
+            <Flammability>0.1</Flammability>
+            <MedicalPotency>0.05</MedicalPotency>
+            <MedicalQualityMax>0.40</MedicalQualityMax>
+        </statBases>
+        <tickerType>Rare</tickerType>
+        <allowedArchonexusCount>20</allowedArchonexusCount>
+    </ThingDef>
+    
+    <RecipeDef ParentName="PSSurgeryBase">
+        <defName>AdministerVaccine</defName>
+        <label>administer vaccine</label>
+        <description>Administer a "Vaccine" to the patient.</description>
+        <workerClass>Recipe_AddHediff</workerClass>
+        <addsHediff>Vaccinated</addsHediff>
+        <jobString>Giving TargetA a 5G- I mean vaccination jab.</jobString>
+        <workAmount>1200</workAmount>
+        <anesthetize>false</anesthetize>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <isViolation>true</isViolation>
+        <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
+        <surgerySuccessChanceFactor>0.1</surgerySuccessChanceFactor>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Vaccine</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+    </RecipeDef>
+    
+    <HediffDef>
+        <defName>Vaccinated</defName>
+        <label>vaccinated</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person has been vaccinated.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.2</MentalBreakThreshold>
+                    <PsychicSensitivity>0.2</PsychicSensitivity>
+                    <GlobalLearningFactor>-0.2</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

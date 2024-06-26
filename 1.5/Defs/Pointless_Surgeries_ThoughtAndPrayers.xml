@@ -44,6 +44,7 @@
         <stages />
         <comps>
             <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks> 
                 <showRemainingTime>true</showRemainingTime>
             </li>
             <li Class="HediffCompProperties_ReplaceHediff">
@@ -56,13 +57,15 @@
             <li Class="Pointless_Surgeries.HediffCompProperties_HealRandomPermanentWoundSingle">
                 <chance>0.1</chance>
             </li>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>ThoughtsAndPrayersThought</thought>
+            </li>
         </comps>
     </HediffDef>
 
     <ThoughtDef>
         <defName>ThoughtsAndPrayersThought</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>ThoughtsAndPrayers</hediff>
         <validWhileDespawned>true</validWhileDespawned>
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>

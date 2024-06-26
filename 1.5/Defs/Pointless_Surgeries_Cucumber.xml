@@ -64,7 +64,7 @@
                         <li>PlantFoodRaw</li>
                     </categories>
                 </filter>
-                <count>1</count>
+                <count>0.1</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
@@ -147,7 +147,7 @@
                         <li>PlantFoodRaw</li>
                     </categories>
                 </filter>
-                <count>1</count>
+                <count>0.2</count>
             </li>
         </ingredients>
         <displayPriority>1441</displayPriority>

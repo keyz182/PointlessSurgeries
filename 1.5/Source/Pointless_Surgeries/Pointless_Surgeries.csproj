@@ -12,8 +12,8 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
-    <AssemblyVersion>1.0.4</AssemblyVersion>
-    <FileVersion>1.0.4</FileVersion>
+    <AssemblyVersion>1.1.1</AssemblyVersion>
+    <FileVersion>1.1.1</FileVersion>
     <Company>keyz182</Company>
     <Product>Pointless Surgeries</Product>
   </PropertyGroup>
@@ -45,6 +45,12 @@
     <Content Condition="Exists('../../../../../Data')" Include="../../../../../Data/**/*">
       <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\1.5\Defs\Pointless_Surgeries_Balance_Humours.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Balance_Humours.xml</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\1.5\Defs\Pointless_Surgeries_Onion.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Onion.xml</Link>
     </Content>
     <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\Common\Textures\polyfillet-smol.png">
       <Link>PointlessSurgeries\Common\Textures\polyfillet-smol.png</Link>
@@ -96,6 +102,18 @@
     
     <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Hysteria.xml">
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Hysteria.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Trepanation.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Trepanation.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Vaccine.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Vaccine.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_HomeRemedy.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_HomeRemedy.xml</Link>
     </ReleaseFiles>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
