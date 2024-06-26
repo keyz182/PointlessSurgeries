@@ -18,13 +18,19 @@ A set of pointless surgeries and things. For the memes.
 - And more...
 
 ## ToDo
-- Scope Creep - a "manager" creep that has steadily increasing expectations and demands
+- Scope Creep - a "manager" creepjoiner that has steadily increasing expectations and demands
 - Vanilla Plants Expanded compat for 🥒
   - pickles
 - Fing-Longer
 - Trepanning
 - Balance the humours
+  - leeches
 - medicines that are just yayo + booze
+- birds are drones
+- 5G vaccine
+- Administer onion
+- Stem cell surgery, chance for complete heal of any condition, but also a chance for a random body part to get cancer/get tentacled (if anomaly)
+
 
 ## Disclaimer
 Portions of the materials used to create this content/mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This content/mod is not official and is not endorsed by Ludeon.
