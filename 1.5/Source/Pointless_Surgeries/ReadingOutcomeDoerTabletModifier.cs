@@ -5,8 +5,6 @@ namespace Pointless_Surgeries;
 
 public class ReadingOutcomeDoerTabletModifier : BookOutcomeDoer
 {
-    public BookOutcomeProperties_TabletModifier Props => (BookOutcomeProperties_TabletModifier)props;
-
     public override bool DoesProvidesOutcome(Pawn reader)
     {
         return true;

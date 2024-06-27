@@ -20,23 +20,34 @@ A set of pointless surgeries and things. For the memes.
 - Balance the humours - eww, leeches.
 - "Vaccine" - it's got microchips in it
 - Home Remedy - Yayo, Beer, and Herbal Medicine, all in one
+- Fing-Longer
+  - randomly gives "Poked eye" hediff to reduce vision by 30%
+  - can randomly give "Poked eye" to self or other pawns in combat, or performing any verb
 - And more...
 
 ## ToDo
 - Scope Creep - a "manager" creepjoiner that has steadily increasing expectations and demands
 - Vanilla Plants Expanded compat for 🥒
   - pickles
-- Fing-Longer
-- birds are drones
-- Stem cell surgery, chance for complete heal of any condition, but also a chance for a random body part to get cancer/get tentacled (if anomaly)
+  - turn a colonist into a pickle
+    - like an actual pickle
+    - they're food now
+    - they're not sentient
+- Birds are drones
 - Bracelets
-  - Magnetic
-  - Copper
+  - Magnetic - walks slower on metal floors
+  - Copper/Steel - attracts lightning
   - etc
-- Manifest Destiny ability
+- Manifest Destiny ability - Given by implanting 500 chemfuel + antigrain warhead
   - Sets all skills to 20 
   - Huge, mapwide antigrain explosion, destroy most of the map
   - Gives them Luci addiction
+- Troll psycaster for Vanilla Psycasting Expanded
+  - Psychic Misfire - randomly shoots
+  - Psychic Shidd pant - ...
+  - Psychic Pantsing - move speed down
+  - Psychic wedgie - pain
+  - Psychic peekaboo - they keep loosing you as a target
 
 
 ## Disclaimer

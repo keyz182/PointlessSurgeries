@@ -12,9 +12,6 @@ public static class Pointless_SurgeriesDefOf
     public static ThingDef MedicineEssentialOils;
     public static ThingDef MedicineHealingCrystals;
     public static ThingDef HomeRemedy;
-    public static ThoughtDef ImplantSuperCucumberThought;
-    public static ThoughtDef ThoughtsAndPrayersThought;
-    public static ThoughtDef SmoothBrainThought;
     public static HediffDef SmoothBrainTemp;
 
     static Pointless_SurgeriesDefOf()

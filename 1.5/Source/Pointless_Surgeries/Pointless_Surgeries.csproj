@@ -7,13 +7,11 @@
     <RootNamespace>Pointless_Surgeries</RootNamespace>
     <AssemblyName>Pointless_Surgeries</AssemblyName>
     <OutputPath>../../Assemblies/</OutputPath>
-    <ZipFilePath>../../../$(AssemblyName).zip</ZipFilePath>
-    <ReleasePath>../../../Release</ReleasePath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
-    <AssemblyVersion>1.1.1</AssemblyVersion>
-    <FileVersion>1.1.1</FileVersion>
+    <AssemblyVersion>1.1.2</AssemblyVersion>
+    <FileVersion>1.1.2</FileVersion>
     <Company>keyz182</Company>
     <Product>Pointless Surgeries</Product>
   </PropertyGroup>
@@ -28,54 +26,22 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>../../../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Condition="Exists('../../../../../Data')" Include="../../../../../Data/**/*">
-      <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\1.5\Defs\Pointless_Surgeries_Balance_Humours.xml">
-      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Balance_Humours.xml</Link>
-    </Content>
-    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\1.5\Defs\Pointless_Surgeries_Onion.xml">
-      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Onion.xml</Link>
-    </Content>
-    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\Common\Textures\polyfillet-smol.png">
-      <Link>PointlessSurgeries\Common\Textures\polyfillet-smol.png</Link>
-    </Content>
-    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\Common\Textures\polyfillet.png">
-      <Link>PointlessSurgeries\Common\Textures\polyfillet.png</Link>
-    </Content>
-    <Content Include="..\..\..\..\..\..\..\..\..\..\Users\keyz_\Code\Pointless Surgeries\Common\Textures\polyfillet.xcf">
-      <Link>PointlessSurgeries\Common\Textures\polyfillet.xcf</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.3.3" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
-    <ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime"/>
   </ItemGroup>
   
   <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5-*"/>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4136-beta" />
   </ItemGroup>
+
   <PropertyGroup>
     <StartAction>Program</StartAction>
     <StartProgram>$(SolutionDir)../../../../RimWorldWin64.exe</StartProgram>
   </PropertyGroup>
+
   <ItemGroup>
     <ReleaseFiles Include="../../../1.*/**" Exclude="../../../1.*/Source/**" />
     <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~"/>
@@ -111,22 +77,30 @@
     <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_HomeRemedy.xml">
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_HomeRemedy.xml</Link>
     </ReleaseFiles>
+
+    <Content Include="..\..\..\Common\Textures\polyfillet-smol.png">
+      <Link>PointlessSurgeries\Common\Textures\polyfillet-smol.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Textures\polyfillet.png">
+      <Link>PointlessSurgeries\Common\Textures\polyfillet.png</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Textures\polyfillet.xcf">
+      <Link>PointlessSurgeries\Common\Textures\polyfillet.xcf</Link>
+    </Content>
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+
+  <Target Name="PostBuild" AfterTargets="Build" >
     <RemoveDir Condition="Exists('../../../Release')" Directories="../../../Release" />
-    <Delete Condition="Exists('../../../$(AssemblyName).zip')" Files="../../../$(AssemblyName).zip" />
     <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'../../../Release/About/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'../../../Release/Common/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'../../../Release/Compatibility/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    
     <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'../../../Release/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
     <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="../../../Release/" SkipUnchangedFiles="false" />
     <ZipDirectory DestinationFile="../../../$(AssemblyName).zip" SourceDirectory="../../../Release" />
-    <RemoveDir Condition="Exists('$(SteamModsPath)')" Directories="$(SteamModsPath)/$(AssemblyName)" ContinueOnError="true"/>
-    <Copy Condition="Exists('$(SteamModsPath)')" SourceFiles="@(ReleaseFolder)" DestinationFiles="@(ReleaseFolder->'$(SteamModsPath)/$(AssemblyName)/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
+
   <Target Name="CleanRelease" AfterTargets="Clean">
-    <RemoveDir Directories="$(ReleasePath)" Condition="Exists('$(ReleasePath)')" />
-    <Delete Files="$(ZipFilePath)" Condition="Exists('$(ZipFilePath)')" />
+    <RemoveDir Directories="../../../Release" Condition="Exists('../../../Release')" />
+    <Delete Files="../../../$(AssemblyName).zip" Condition="Exists('../../../$(AssemblyName).zip')" />
   </Target>
 </Project>
