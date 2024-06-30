@@ -159,8 +159,8 @@
     </RecipeDef>
 
     <RecipeDef ParentName="SurgeryInstallImplantBase">
-        <defName>ImplantSuperCucumber</defName>
-        <label>implant super cucumber</label>
+        <defName>ImplantSuperCucumberCrotch</defName>
+        <label>implant super cucumber in the pelvis</label>
         <description>Implants the super cucumber to, err, why are we doing this again?</description>
         <jobString>Sucering that Cupumber right in there.</jobString>
         <researchPrerequisite>
@@ -169,7 +169,7 @@
         <appliedOnFixedBodyParts>
             <li>Pelvis</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>ImplantSuperCucumber</addsHediff>
+        <addsHediff>ImplantSuperCucumberCrotch</addsHediff>
         <ingredients>
             <li>
                 <filter>
@@ -188,7 +188,7 @@
     </RecipeDef>
 
     <HediffDef>
-        <defName>ImplantSuperCucumber</defName>
+        <defName>ImplantSuperCucumberCrotch</defName>
         <label>super cucumber</label>
         <hediffClass>HediffWithComps</hediffClass>
         <description>This person has a super cucumber implanted in them.</description>
@@ -201,6 +201,68 @@
                 <statOffsets>
                     <SocialImpact>-0.15</SocialImpact>
                     <PawnBeauty>5</PawnBeauty>
+                </statOffsets>
+                <partEfficiencyOffset>-0.10</partEfficiencyOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>ImplantSuperCucumberThought</thought>
+            </li>
+            <li Class="HediffCompProperties_GiveLovinMTBFactor">
+                <lovinMTBFactor>0.5</lovinMTBFactor>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>SuperCucumber</spawnThingOnRemoved>
+    </HediffDef>
+    
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>ImplantSuperCucumberBrain</defName>
+        <label>stuff super cucumber into frontal lobe</label>
+        <description>Implants the super cucumber to, err, why are we doing this again?</description>
+        <jobString>Sucering that Cupumber right in there.</jobString>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>ImplantSuperCucumberBrain</addsHediff>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SuperCucumber</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SuperCucumber</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <HediffDef>
+        <defName>ImplantSuperCucumberBrain</defName>
+        <label>super cucumber</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person has a super cucumber implanted in them.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <descriptionHyperlinks>
+            <ThingDef>PolyFillet</ThingDef>
+        </descriptionHyperlinks>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GlobalLearningFactor>-0.4</GlobalLearningFactor>
+                    <MaxNutrition>0.2</MaxNutrition>
+                    <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+                    <PsychicEntropyMax>10</PsychicEntropyMax>
+                    <PsychicSensitivity>0.05</PsychicSensitivity>
+                    <PsychicEntropyRecoveryRate>0.05</PsychicEntropyRecoveryRate>
                 </statOffsets>
                 <partEfficiencyOffset>-0.10</partEfficiencyOffset>
             </li>
@@ -230,5 +292,7 @@
             </li>
         </stages>
     </ThoughtDef>
+    
+    
 
 </Defs>

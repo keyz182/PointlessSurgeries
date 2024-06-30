@@ -15,6 +15,7 @@ A set of pointless surgeries and things. For the memes.
 - A Tablet - Who doesn't want to endlessly doomscroll and end up with acute smooth-brain?
 - Polyfillet - An amazing compound capable of smoothing out the wrinkliest of brains. Applied via surgery.
 - Super Cucumber - What more is there to say.
+  - Implant in the brain, or the pelvis
 - Trepanning - high chance to kill the pawn. Low chance to heal a permanent injury
 - Administer Onion - why do I smell like onions now?
 - Balance the humours - eww, leeches.
@@ -22,7 +23,16 @@ A set of pointless surgeries and things. For the memes.
 - Home Remedy - Yayo, Beer, and Herbal Medicine, all in one
 - Fing-Longer
   - randomly gives "Poked eye" hediff to reduce vision by 30%
-  - can randomly give "Poked eye" to self or other pawns in combat, or performing any verb
+  - can randomly give "Poked eye"to self or other pawns in combat, or performing any verb
+- Destiny Manifester
+  - Implant an antigrain warhead and 500 chemfuel.
+  - Gives a +20 mood buff "Yeehaw"
+  - If there's not at least 1000 chemfuel on the map, there's also a -60 mood debuff "I NEED OIL"
+  - Gives the "Manifest Destiny" ability
+    - One-shot instant mapwide antigrain explosion
+    - Pawn skills all set to 20
+    - All faction goodwill inverted
+    - Gives them Luci addiction
 - And more...
 
 ## ToDo
@@ -33,21 +43,19 @@ A set of pointless surgeries and things. For the memes.
     - like an actual pickle
     - they're food now
     - they're not sentient
-- Birds are drones
 - Bracelets
   - Magnetic - walks slower on metal floors
   - Copper/Steel - attracts lightning
   - etc
-- Manifest Destiny ability - Given by implanting 500 chemfuel + antigrain warhead
-  - Sets all skills to 20 
-  - Huge, mapwide antigrain explosion, destroy most of the map
-  - Gives them Luci addiction
 - Troll psycaster for Vanilla Psycasting Expanded
   - Psychic Misfire - randomly shoots
   - Psychic Shidd pant - ...
   - Psychic Pantsing - move speed down
   - Psychic wedgie - pain
   - Psychic peekaboo - they keep loosing you as a target
+- Crotch Rocket
+  - Pawn is infertile
+  - Has low range reloadable rocket launcher
 
 
 ## Disclaimer

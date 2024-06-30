@@ -13,6 +13,9 @@ public static class Pointless_SurgeriesDefOf
     public static ThingDef MedicineHealingCrystals;
     public static ThingDef HomeRemedy;
     public static HediffDef SmoothBrainTemp;
+    public static HistoryEventDef ManifestDestinyEnacted;
+
+    public static DamageDef BombGiga;
 
     static Pointless_SurgeriesDefOf()
     {

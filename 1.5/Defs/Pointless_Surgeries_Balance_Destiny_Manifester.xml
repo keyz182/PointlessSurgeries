@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    
+    <ThingDef ParentName="MakeableShellBase">
+        <defName>DestinyManifester</defName>
+        <label>destiny manifester</label>
+        <description>Manifest your destiny.</description>
+        <possessionCount>1</possessionCount>
+                
+        <graphicData>
+            <texPath>Things/PS_DestinyManifester</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>56</explosiveRadius>
+                <explosiveDamageType>BombSuper</explosiveDamageType>
+                <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+                <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+                <wickTicks>60~120</wickTicks>
+            </li>
+        </comps>
+        
+        <projectileWhenLoaded>Bullet_Shell_AntigrainWarhead</projectileWhenLoaded>
+        <costList>
+            <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
+            <Chemfuel>500</Chemfuel>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>Mortars</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>DestinyManifesterImplanted</defName>
+        <label>destiny manifester</label>
+        <labelNoun>a destiny manifester</labelNoun>
+        <description>Activate to see your destiny manifest.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PolyFillet</ThingDef>
+        </descriptionHyperlinks>
+        <comps>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>DestinyManifesterImplantedThought</thought>
+            </li>
+            <li Class="HediffCompProperties_GiveAbility">
+                <abilityDefs>
+                    <li>ManifestDestiny</li>
+                </abilityDefs>
+            </li>
+            <li Class="Pointless_Surgeries.HediffCompProperties_GiveThoughtOnMapResourceLevel">
+                <thought>MadNoOilThought</thought>
+                <resource>Chemfuel</resource>
+                <amount>1000</amount>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>PolyFillet</spawnThingOnRemoved>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallDestinyManifester</defName>
+        <label>Install destiny manifester</label>
+        <description>Installs destiny manifester.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DestinyManifester</ThingDef>
+            <HediffDef>DestinyManifesterImplanted</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing destiny manifester.</jobString>
+        <researchPrerequisite>
+            <li>PointlessSurgeries</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>DestinyManifester</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>DestinyManifester</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>DestinyManifesterImplanted</addsHediff>
+    </RecipeDef>
+
+    <ThoughtDef>
+        <defName>DestinyManifesterImplantedThought</defName>
+        <validWhileDespawned>true</validWhileDespawned>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>destiny manifester</label>
+                <description>Yeehaw</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>MadNoOilThought</defName>
+        <validWhileDespawned>true</validWhileDespawned>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>NO OIL!</label>
+                <description>THERE'S NO CHEMFUEL! ARGH!</description>
+                <baseMoodEffect>-60</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <SoundDef>
+        <defName>Explosion_ManifestDestiny</defName>  
+        <context>MapOnly</context> 
+        <maxSimultaneous>1</maxSimultaneous>  
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Things/PS_ManifestDestinyBoomFart</clipPath>
+                    </li>
+                </grains>      
+                <volumeRange>100~100</volumeRange>      
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+    
+    <AbilityDef>
+        <defName>ManifestDestiny</defName>
+        <label>manifest destiny</label>
+        <description>Initiate manifest destiny. Nukes and oil baybee.</description>
+        
+        <iconPath>Things/PS_DestinyManifester</iconPath>
+        
+        <cooldownTicksRange>7500</cooldownTicksRange> <!-- 3 hours -->
+        <warmupEffecter>HoraxianSpellDark_Warmup</warmupEffecter>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <writeCombatLog>true</writeCombatLog>
+        <charges>1</charges>
+        <cooldownPerCharge>true</cooldownPerCharge>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0</warmupTime>
+            <hasStandardCommand>true</hasStandardCommand>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <onlyManualCast>True</onlyManualCast>
+            <targetable>false</targetable>
+        </verbProperties>
+        
+        <comps>
+            <li Class="Pointless_Surgeries.CompProperties_AbilityManifestDestiny">
+                <Radius>56</Radius>
+                <DamageType>BombGiga</DamageType>
+                <ExplosionEffect>GiantExplosion</ExplosionEffect>
+                <HighHediff>LuciferiumHigh</HighHediff>
+                <NeedHediff>LuciferiumAddiction</NeedHediff>
+            </li>
+        </comps>
+    </AbilityDef>
+    
+    <HistoryEventDef>
+        <defName>ManifestDestinyEnacted</defName>
+        <label>manifest destiny baybee!</label>
+    </HistoryEventDef>
+    
+    <DamageDef ParentName="Bomb">
+        <defName>BombGiga</defName>
+        <workerClass>Pointless_Surgeries.DamageWorker_GigaExplosion</workerClass>
+        <defaultDamage>850</defaultDamage>
+        <defaultStoppingPower>8.0</defaultStoppingPower>
+        <defaultArmorPenetration>3</defaultArmorPenetration>
+        <buildingDamageFactorImpassable>400</buildingDamageFactorImpassable>
+        <buildingDamageFactorPassable>400</buildingDamageFactorPassable>
+        <plantDamageFactor>40</plantDamageFactor>
+        <corpseDamageFactor>4</corpseDamageFactor>
+        <explosionHeatEnergyPerCell>40</explosionHeatEnergyPerCell>
+        <scaleDamageToBuildingsBasedOnFlammability>true</scaleDamageToBuildingsBasedOnFlammability>
+        <deathMessage>{0} has been freed!</deathMessage>
+        <soundExplosion>Explosion_ManifestDestiny</soundExplosion>
+    </DamageDef>
+</Defs>
