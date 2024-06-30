@@ -11,10 +11,11 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <SteamPath Condition=" '$(RIMWORLD_STEAM_PATH)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\RimWorld</SteamPath>
     <SteamModsPath Condition=" '$(RIMWORLD_STEAM_MODS_PATH)' == '' ">$(SteamPath)/Mods</SteamModsPath>
-    <AssemblyVersion>1.1.2</AssemblyVersion>
-    <FileVersion>1.1.2</FileVersion>
+    <AssemblyVersion>1.2.0</AssemblyVersion>
+    <FileVersion>1.2.0</FileVersion>
     <Company>keyz182</Company>
     <Product>Pointless Surgeries</Product>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
