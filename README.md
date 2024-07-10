@@ -33,6 +33,8 @@ A set of pointless surgeries and things. For the memes.
     - Pawn skills all set to 20
     - All faction goodwill inverted
     - Gives them Luci addiction
+- Sams Crazy Pills
+  - Pills wot for build base faster
 - And more...
 
 ## ToDo

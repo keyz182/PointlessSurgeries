@@ -10,12 +10,14 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <SteamPath Condition=" '$(RIMWORLD_STEAM_PATH)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\RimWorld</SteamPath>
+    <SteamPath Condition=" '$(RIMWORLD_STEAM_PATH)' != '' ">$(RIMWORLD_STEAM_PATH)</SteamPath>
     <SteamModsPath Condition=" '$(RIMWORLD_STEAM_MODS_PATH)' == '' ">$(SteamPath)/Mods</SteamModsPath>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
-    <FileVersion>1.2.0</FileVersion>
+    <SteamModsPath Condition=" '$(RIMWORLD_STEAM_MODS_PATH)' != '' ">$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
+    <AssemblyVersion>1.2.1</AssemblyVersion>
+    <FileVersion>1.2.1</FileVersion>
     <Company>keyz182</Company>
     <Product>Pointless Surgeries</Product>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -87,10 +89,14 @@
     <CommonFiles Include="../../../Common/**" />
     <_ReleaseDir Include="../../../Release/**" />
     <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_SamsCrazyPills.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_SamsCrazyPills.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
 
 
-  <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+
+  <Target Name="PostBuildRelease" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Release' ">
     <Message Text="*** SteamPath = $(SteamPath) ***" Importance="high" />
     <Message Text="*** SteamModsPath = $(SteamModsPath) ***" Importance="high" />
     <Message Condition="Exists('$(SteamPath)')" Text="*** TEST ***" Importance="high" />
@@ -104,6 +110,8 @@
     <Copy SourceFiles="@(CommonFiles)"
       DestinationFiles="@(CommonFiles->'../../../Release/Common/%(RecursiveDir)%(Filename)%(Extension)')"
       SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'../../../Release/Compatibility/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    
     <Copy SourceFiles="@(ReleaseFiles)"
       DestinationFiles="@(ReleaseFiles->'../../../Release/%(RecursiveDir)%(Filename)%(Extension)')"
       SkipUnchangedFiles="false" />
@@ -119,8 +127,7 @@
     <ZipDirectory DestinationFile="../../../$(AssemblyName).zip" SourceDirectory="../../../Release" />
   </Target>
 
-  <Target Name="PostBuildScript" AfterTargets="Build" Condition=" '$(Configuration)' == 'Debug' ">
-
+  <Target Name="PostBuildDebug" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
     <RemoveDir Condition="Exists('../../../Release')" Directories="../../../Release" />
     <Delete Condition="Exists('../../../$(AssemblyName).zip')" Files="../../../$(AssemblyName).zip" />
     <Copy SourceFiles="@(AboutFiles)"
@@ -129,7 +136,8 @@
     <Copy SourceFiles="@(CommonFiles)"
       DestinationFiles="@(CommonFiles->'../../../Release/Common/%(RecursiveDir)%(Filename)%(Extension)')"
       SkipUnchangedFiles="true" />
-
+    <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'../../../Release/Compatibility/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    
     <Copy SourceFiles="@(ReleaseFiles)"
       DestinationFiles="@(ReleaseFiles->'../../../Release/%(RecursiveDir)%(Filename)%(Extension)')"
       SkipUnchangedFiles="false" />
