@@ -6,6 +6,9 @@
 
 # Pointless Surgeries
 
+[Latest Release](https://github.com/keyz182/PointlessSurgeries/releases/)
+
+
 A set of pointless surgeries and things. For the memes.
 
 - Bloodletting - gives bloodloss
