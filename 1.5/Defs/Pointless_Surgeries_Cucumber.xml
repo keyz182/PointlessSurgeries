@@ -112,6 +112,12 @@
             <preferability>MealSimple</preferability>
             <ingestEffect>EatVegetarian</ingestEffect>
             <foodType>VegetableOrFruit</foodType>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>PS_JumpingBean</hediffDef>
+                    <severity>1</severity>
+                </li>
+            </outcomeDoers>
         </ingestible>
         <statBases>
             <MarketValue>50</MarketValue>
@@ -186,6 +192,28 @@
             </thingDefs>
         </fixedIngredientFilter>
     </RecipeDef>
+
+    <HediffDef>
+        <defName>PS_JumpingBean</defName>
+        <label>jumping bean syndrome</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person ate a super cucumber. They're hopping mad.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <tendable>false</tendable>
+        <isBad>false</isBad>
+        <descriptionHyperlinks>
+            <ThingDef>SuperCucumber</ThingDef>
+        </descriptionHyperlinks>
+        <comps>
+            <li Class="Pointless_Surgeries.HediffCompProperties_JumpingBean">
+                <JumpFrequency>300~3000</JumpFrequency>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDayRange>-0.75~-1</severityPerDayRange>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+    </HediffDef>
 
     <HediffDef>
         <defName>ImplantSuperCucumberCrotch</defName>
