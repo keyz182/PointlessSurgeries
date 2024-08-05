@@ -20,7 +20,7 @@
 
         <recipeMaker>
             <productCount>5</productCount>
-            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <researchPrerequisite>PS_MysticHealing</researchPrerequisite>
             <recipeUsers>
                 <li>Campfire</li>
                 <li>ElectricStove</li>

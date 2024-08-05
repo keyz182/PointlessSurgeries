@@ -5,6 +5,9 @@
         <defName>AdministerOnion</defName>
         <label>administer onion</label>
         <description>Administer an onion to the patient.</description>
+        <descriptionHyperlinks>
+            <HediffDef>OnionAdministered</HediffDef>
+        </descriptionHyperlinks>
         <workerClass>Recipe_AddHediff</workerClass>
         <addsHediff>OnionAdministered</addsHediff>
         <jobString>Administering onion to TargetA.</jobString>
@@ -20,7 +23,7 @@
             <Medicine>0</Medicine>
         </skillRequirements>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_MysticHealing</li>
         </researchPrerequisite>
         <ingredients>
             <li MayRequire="VanillaExpanded.VPlantsE">

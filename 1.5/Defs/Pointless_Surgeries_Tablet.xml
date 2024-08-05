@@ -15,7 +15,7 @@
         <statBases>
             <MarketValue>250</MarketValue>
         </statBases>
-        <techLevel>Neolithic</techLevel>
+        <techLevel>Industrial</techLevel>
         <tradeability>All</tradeability>
         <tradeTags>
             <li>TechHediff</li>
@@ -44,6 +44,45 @@
             </li>
         </comps>
     </ThingDef>
+    
+    <RecipeDef>
+        <defName>PS_CreateTablet</defName>
+        <label>make tablet</label>
+        <description>Create a new tablet for endless doomscrolling. \n\n Provides some nice temporary brain smoothing.</description>
+        <jobString>Create a new tablet.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workAmount>2000</workAmount>
+        <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+        <researchPrerequisite>
+            <li>PS_TechBrainSmoothing</li>
+        </researchPrerequisite>
+        <products>
+            <PS_Tablet>1</PS_Tablet>
+        </products>
+        <recipeUsers>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+    </RecipeDef>
 
     <RulePackDef>
         <defName>PS_Description_Tablet</defName>

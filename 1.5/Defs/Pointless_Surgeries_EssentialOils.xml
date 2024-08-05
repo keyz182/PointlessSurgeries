@@ -11,7 +11,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.85</drawSize>
         </graphicData>
-        <techLevel>Neolithic</techLevel>
+        <techLevel>Animal</techLevel>
         <costList>
             <Chemfuel>10</Chemfuel>
         </costList>
@@ -19,7 +19,7 @@
 
         <recipeMaker>
             <productCount>5</productCount>
-            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <researchPrerequisite>PS_MysticHealing</researchPrerequisite>
             <recipeUsers>
                 <li>Campfire</li>
                 <li>ElectricStove</li>

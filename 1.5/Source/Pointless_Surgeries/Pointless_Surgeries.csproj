@@ -92,6 +92,9 @@
     <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_SamsCrazyPills.xml">
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_SamsCrazyPills.xml</Link>
     </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Research.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Research.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
 
 

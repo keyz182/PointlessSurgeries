@@ -5,13 +5,17 @@
     <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
         <defName>EquipFingLonger</defName>
         <label>equip the finglonger</label>
-        <description>Equips the patient with a finglonger.</description>
-        <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+        <description>Equips the patient with a finglonger. Careful, you might poke your eye out with that.</description>
+        <descriptionHyperlinks>
+            <ThingDef>WoodLog</ThingDef>
+            <HediffDef>PokedEye</HediffDef>
+        </descriptionHyperlinks>
         <addsHediff>FingLonger</addsHediff>
         <jobString>Equipping finglonger on TargetA.</jobString>
         <appliedOnFixedBodyParts>
             <li>Hand</li>
         </appliedOnFixedBodyParts>
+        <researchPrerequisite>PS_PointlessAugments</researchPrerequisite>
     </RecipeDef>
     
     <HediffDef>

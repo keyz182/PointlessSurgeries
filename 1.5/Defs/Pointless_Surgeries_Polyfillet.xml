@@ -60,7 +60,7 @@
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_BrainSmoothing</li>
         </researchPrerequisite>
         <products>
             <PolyFillet>16</PolyFillet>
@@ -142,7 +142,7 @@
         </descriptionHyperlinks>
         <jobString>Smoothing out the brain.</jobString>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_BrainSmoothing</li>
         </researchPrerequisite>
         <ingredients>
             <li>
@@ -180,23 +180,4 @@
         </stages>
     </ThoughtDef>
 
-    <ResearchProjectDef>
-        <defName>PointlessSurgeries</defName>
-        <label>Pointless Surgeries</label>
-        <description>Pointless surgeries. Brain smoothing, healing crystals, bloodletting.</description>
-        <baseCost>300</baseCost>
-        <techLevel>Animal</techLevel>
-
-        <generalRules>
-            <rulesStrings>
-                <li>subject->polyfillet</li>
-
-                <li>subject_story->wrote a note about a smooth meat paste they made</li>
-                <li>subject_story->noted that the meat paste nicely fills in brain wrinkles</li>
-
-                <li>subject_gerund->crafting polyfillet</li>
-
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
 </Defs>

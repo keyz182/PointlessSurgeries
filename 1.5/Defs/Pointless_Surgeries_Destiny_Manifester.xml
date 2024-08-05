@@ -6,6 +6,11 @@
         <defName>DestinyManifester</defName>
         <label>destiny manifester</label>
         <description>Manifest your destiny.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PolyFillet</ThingDef>
+            <HediffDef>DestinyManifesterImplanted</HediffDef>
+            <AbilityDef>ManifestDestiny</AbilityDef>
+        </descriptionHyperlinks>
         <possessionCount>1</possessionCount>
                 
         <graphicData>
@@ -40,6 +45,8 @@
         <description>Activate to see your destiny manifest.</description>
         <descriptionHyperlinks>
             <ThingDef>PolyFillet</ThingDef>
+            <AbilityDef>ManifestDestiny</AbilityDef>
+            <ThingDef>DestinyManifester</ThingDef>
         </descriptionHyperlinks>
         <comps>
             <li Class="HediffCompProperties_ThoughtSetter">
@@ -62,14 +69,15 @@
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallDestinyManifester</defName>
         <label>Install destiny manifester</label>
-        <description>Installs destiny manifester.</description>
+        <description>Installs destiny manifester.\n\nThis gives the pawn the Maniest Destiny ability. Good luck with that.</description>
         <descriptionHyperlinks>
             <ThingDef>DestinyManifester</ThingDef>
             <HediffDef>DestinyManifesterImplanted</HediffDef>
+            <AbilityDef>ManifestDestiny</AbilityDef>
         </descriptionHyperlinks>
         <jobString>Installing destiny manifester.</jobString>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_DestinyManifester</li>
         </researchPrerequisite>
         <ingredients>
             <li>
@@ -140,7 +148,7 @@
     <AbilityDef>
         <defName>ManifestDestiny</defName>
         <label>manifest destiny</label>
-        <description>Initiate manifest destiny. Nukes and oil baybee.</description>
+        <description>Initiate manifest destiny. Nukes and oil baybee.\n\nThis will set of a map wide MEGA explosion that will destroy everything except the pawn. In return, you get 20 skills across the board, and all your faction relations get flipped.</description>
         
         <iconPath>Things/PS_DestinyManifester</iconPath>
         

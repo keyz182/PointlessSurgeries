@@ -4,7 +4,7 @@
     <RecipeDef ParentName="PSSurgeryBase">
         <defName>Bloodletting</defName>
         <label>bloodletting</label>
-        <description>Release some blood from the patient to, err, balance the humours or something? I don't know! What do I look like, some kind of medical practitioner?</description>
+        <description>Release some blood from the patient to, err, heal them or something? I don't know! What do I look like, some kind of medical practitioner?</description>
         <workerClass>Recipe_AddHediff</workerClass>
         <addsHediff>BloodLoss</addsHediff>
         <jobString>Letting blood from TargetA.</jobString>
@@ -18,7 +18,7 @@
             <Medicine>1</Medicine>
         </skillRequirements>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_MysticHealing</li>
         </researchPrerequisite>
     </RecipeDef>
 </Defs>

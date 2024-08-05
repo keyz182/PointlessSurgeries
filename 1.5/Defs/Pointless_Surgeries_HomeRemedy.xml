@@ -33,7 +33,7 @@
 
         <recipeMaker>
             <productCount>1</productCount>
-            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <researchPrerequisite>PS_CrazyPills</researchPrerequisite>
             <recipeUsers>
                 <li>Campfire</li>
                 <li>ElectricStove</li>

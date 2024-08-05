@@ -4,7 +4,11 @@
     <ThingDef ParentName="MedicineBase">
         <defName>Vaccine</defName>
         <label>"Vaccine"</label>
-        <description>A "vaccine". Why does it look like there's electronics in there?</description>
+        <description>A "vaccine". Why does it look like there's microchips in there?</description>
+        <descriptionHyperlinks>
+            <RecipeDef>AdministerVaccine</RecipeDef>
+            <HediffDef>Vaccinated</HediffDef>
+        </descriptionHyperlinks>
         <possessionCount>4</possessionCount>
         <graphicData>
             <texPath>Things/PS_Vaccine</texPath>
@@ -20,7 +24,7 @@
 
         <recipeMaker>
             <productCount>5</productCount>
-            <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+            <researchPrerequisite>PS_CrazyPills</researchPrerequisite>
             <recipeUsers>
                 <li>Campfire</li>
                 <li>ElectricStove</li>
@@ -50,6 +54,10 @@
         <defName>AdministerVaccine</defName>
         <label>administer vaccine</label>
         <description>Administer a "Vaccine" to the patient.</description>
+        <descriptionHyperlinks>
+            <ThingDef>Vaccine</ThingDef>
+            <HediffDef>Vaccinated</HediffDef>
+        </descriptionHyperlinks>
         <workerClass>Recipe_AddHediff</workerClass>
         <addsHediff>Vaccinated</addsHediff>
         <jobString>Giving TargetA a 5G- I mean vaccination jab.</jobString>
@@ -65,7 +73,7 @@
             <Medicine>0</Medicine>
         </skillRequirements>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_CrazyPills</li>
         </researchPrerequisite>
         <ingredients>
             <li>
@@ -84,6 +92,10 @@
         <label>vaccinated</label>
         <hediffClass>HediffWithComps</hediffClass>
         <description>This person has been vaccinated.</description>
+        <descriptionHyperlinks>
+            <ThingDef>Vaccine</ThingDef>
+            <RecipeDef>AdministerVaccine</RecipeDef>
+        </descriptionHyperlinks>
         <everCurableByItem>false</everCurableByItem>
         <stages>
             <li>

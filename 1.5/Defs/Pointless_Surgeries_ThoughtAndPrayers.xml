@@ -19,7 +19,10 @@
     <RecipeDef ParentName="PSSurgeryBase">
         <defName>ThoughtsAndPrayers</defName>
         <label>thoughts and prayers</label>
-        <description>Thoughs and Prayers for the injured. Will it actually do anything?</description>
+        <description>Thoughs and Prayers for the injured. Will it actually do anything?\n\nHas a very small chance of having the healer mech serum effect. Very small. Tiny.</description>
+        <descriptionHyperlinks>
+            <HediffDef>ThoughtsAndPrayers</HediffDef>
+        </descriptionHyperlinks>
         <anesthetize>false</anesthetize>
         <jobString>Thinking and praying.</jobString>
         <hideBodyPartNames>true</hideBodyPartNames>
@@ -27,7 +30,7 @@
         <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
         <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_MysticHealing</li>
         </researchPrerequisite>
         <appliedOnFixedBodyParts>
             <li>Brain</li>
@@ -55,7 +58,7 @@
                 </hediffs>
             </li>
             <li Class="Pointless_Surgeries.HediffCompProperties_HealRandomPermanentWoundSingle">
-                <chance>0.1</chance>
+                <chance>0.05</chance>
             </li>
             <li Class="HediffCompProperties_ThoughtSetter">
                 <thought>ThoughtsAndPrayersThought</thought>

@@ -4,7 +4,7 @@
     <ThingDef ParentName="MealCooked">
         <defName>Cucumber</defName>
         <label>cucumber</label>
-        <description>A cucumber.</description>
+        <description>A cucumber. You can eat it if you want.</description>
         <descriptionHyperlinks>
             <RecipeDef>Make_A_Cucumber</RecipeDef>
         </descriptionHyperlinks>
@@ -43,7 +43,7 @@
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_Cucumbers</li>
         </researchPrerequisite>
         <products>
             <Cucumber>1</Cucumber>
@@ -100,7 +100,7 @@
     <ThingDef ParentName="MealCooked">
         <defName>SuperCucumber</defName>
         <label>super cucumber</label>
-        <description>A super cucumber.</description>
+        <description>A super cucumber. You can eat it if you really want. You'd probably end up hopping mad though.</description>
         <descriptionHyperlinks>
             <RecipeDef>Make_A_Super_Cucumber</RecipeDef>
         </descriptionHyperlinks>
@@ -130,9 +130,9 @@
     <RecipeDef ParentName="CucumberBase">
         <defName>Make_A_Super_Cucumber</defName>
         <label>make a super cucumber</label>
-        <description>Make a super cucumber. No, this definately doesn't make sense.</description>
+        <description>Make a super cucumber. No, this definitely doesn't make sense.</description>
         <jobString>Making super cucumber.</jobString>
-        <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+        <researchPrerequisite>PS_Cucumbers</researchPrerequisite>
         <workAmount>500</workAmount>
         <products>
             <SuperCucumber>1</SuperCucumber>
@@ -167,10 +167,10 @@
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>ImplantSuperCucumberCrotch</defName>
         <label>implant super cucumber in the pelvis</label>
-        <description>Implants the super cucumber to, err, why are we doing this again?</description>
+        <description>Implants the super cucumber to - wait, what the hell are we doing? It's a cucumber with a cape, that we made from other vegetables. No, seriously, what the hell is going on? You know what, sod it, I'm too tired. In it goes!\n\nThe pawn will now be strangely attractive to everyone. There's probably some downsides.</description>
         <jobString>Sucering that Cupumber right in there.</jobString>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_Cucumbers</li>
         </researchPrerequisite>
         <appliedOnFixedBodyParts>
             <li>Pelvis</li>
@@ -247,10 +247,10 @@
     <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>ImplantSuperCucumberBrain</defName>
         <label>stuff super cucumber into frontal lobe</label>
-        <description>Implants the super cucumber to, err, why are we doing this again?</description>
+        <description>Implants the super cucumber to - wait, what the hell are we doing? It's a cucumber with a cape, that we made from other vegetables. No, seriously, what the hell is going on? You know what, sod it, I'm too tired. In it goes!\n\nThe pawn will become more psychically sensitive, there's almost certainly some downsides to this.</description>
         <jobString>Sucering that Cupumber right in there.</jobString>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_Cucumbers</li>
         </researchPrerequisite>
         <appliedOnFixedBodyParts>
             <li>Brain</li>

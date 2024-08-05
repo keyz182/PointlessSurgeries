@@ -6,12 +6,16 @@
         <defName>PS_MakeSamsCrazyPills</defName>
         <label>make sams crazy pills</label>
         <description>Makes some of Sams crazy pills for what make build base go fast now.</description>
+        <descriptionHyperlinks>
+            <HediffDef>PS_BuildBase</HediffDef>
+            <ThingDef>PS_SamsCrazyPills</ThingDef>
+        </descriptionHyperlinks>
         <jobString>making crazy pills.</jobString>
         <workSpeedStat>DrugCookingSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
         <workAmount>500</workAmount>
-        <researchPrerequisite>PointlessSurgeries</researchPrerequisite>
+        <researchPrerequisite>PS_CrazyPills</researchPrerequisite>
         <recipeUsers>
             <li>Campfire</li>
             <li>ElectricStove</li>
@@ -62,6 +66,7 @@
             <HediffDef>WakeUpHigh</HediffDef>
             <HediffDef>WakeUpAddiction</HediffDef>
             <HediffDef>HeartAttack</HediffDef>
+            <RecipeDef>PS_MakeSamsCrazyPills</RecipeDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/PS_SamsCrazyPills</texPath>

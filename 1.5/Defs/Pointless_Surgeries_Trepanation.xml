@@ -4,7 +4,11 @@
     <RecipeDef ParentName="PSSurgeryBase">
         <defName>Trepanning</defName>
         <label>trepanning</label>
-        <description>Smash a hole in the patients head.</description>
+        <description>Use a club and a stout stick to carefully bash a hole in the pawns head.</description>
+        <descriptionHyperlinks>
+            <HediffDef>Treppanned</HediffDef>
+            <ThoughtDef>TreppannedThought</ThoughtDef>
+        </descriptionHyperlinks>
         <workerClass>Recipe_AddHediff</workerClass>
         <addsHediff>Treppanned</addsHediff>
         <jobString>Smashing a hole in TargetA.</jobString>
@@ -20,13 +24,21 @@
             <Medicine>0</Medicine>
         </skillRequirements>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_BrainSmoothing</li>
         </researchPrerequisite>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
                         <li>MeleeWeapon_Club</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>WoodLog</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>

@@ -4,7 +4,7 @@
     <RecipeDef ParentName="PSSurgeryBase">
         <defName>BalanceHumours</defName>
         <label>balance humours</label>
-        <description>Use leeches to balance the humours.</description>
+        <description>Use leeches to balance the humours.\n\nGives a +1 mood boost due to your humours being balanced.\n\nGives a -1 mood boost because leeches are ick.</description>
         <workerClass>Recipe_AddHediff</workerClass>
         <addsHediff>HumoursBalanced</addsHediff>
         <jobString>Balancing the humours for TargetA.</jobString>
@@ -20,7 +20,7 @@
             <Medicine>0</Medicine>
         </skillRequirements>
         <researchPrerequisite>
-            <li>PointlessSurgeries</li>
+            <li>PS_MysticHealing</li>
         </researchPrerequisite>
         <ingredients/>
     </RecipeDef>
