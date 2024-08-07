@@ -4,4 +4,6 @@
     <Pointless_Surgeries_SettingsCategory>Pointless Surgeries</Pointless_Surgeries_SettingsCategory>
     <PS_CheckBackLater>Check back later</PS_CheckBackLater>
     <Pointless_Surgeries_TabletJoyFactor>Recreation gain multiplier</Pointless_Surgeries_TabletJoyFactor>
+    <PS_PlaqueBullet_FailureMote>Failure: {0} chance</PS_PlaqueBullet_FailureMote>
+    <PS_PlaqueBullet_SuccessMessage>{0} hit {1} and gave them stinky breath!</PS_PlaqueBullet_SuccessMessage>
 </LanguageData>

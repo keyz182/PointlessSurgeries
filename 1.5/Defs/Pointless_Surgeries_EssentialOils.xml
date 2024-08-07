@@ -16,7 +16,11 @@
             <Chemfuel>10</Chemfuel>
         </costList>
         <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
-
+        
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        
         <recipeMaker>
             <productCount>5</productCount>
             <researchPrerequisite>PS_MysticHealing</researchPrerequisite>

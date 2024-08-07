@@ -11,12 +11,25 @@
             <HediffDef>DestinyManifesterImplanted</HediffDef>
             <AbilityDef>ManifestDestiny</AbilityDef>
         </descriptionHyperlinks>
-        <possessionCount>1</possessionCount>
+        <possessionCount>0</possessionCount>
+        <generateAllowChance>0</generateAllowChance>
                 
         <graphicData>
             <texPath>Things/PS_DestinyManifester</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        
+        <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+        <genericMarketSellable>false</genericMarketSellable>
+        <tradeNeverGenerateStacked>true</tradeNeverGenerateStacked>
+        
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
         
         <comps>
             <li Class="CompProperties_Explosive">
@@ -34,7 +47,7 @@
             <Chemfuel>500</Chemfuel>
         </costList>
         <recipeMaker>
-            <researchPrerequisite>Mortars</researchPrerequisite>
+            <researchPrerequisite>PS_DestinyManifester</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 

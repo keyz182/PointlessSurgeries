@@ -30,7 +30,11 @@
             <MedicineHerbal>1</MedicineHerbal>
         </costList>
         <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
-
+        
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        
         <recipeMaker>
             <productCount>1</productCount>
             <researchPrerequisite>PS_CrazyPills</researchPrerequisite>

@@ -17,6 +17,10 @@
         <costList>
             <ChunkMarble>1</ChunkMarble>
         </costList>
+        
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
 
         <recipeMaker>
             <productCount>5</productCount>

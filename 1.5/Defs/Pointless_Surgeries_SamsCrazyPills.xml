@@ -74,7 +74,11 @@
             <drawSize>0.85</drawSize>
         </graphicData>
         <techLevel>Neolithic</techLevel>
-
+        
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        
         <statBases>
             <MarketValue>60</MarketValue>
             <Mass>0.45</Mass>

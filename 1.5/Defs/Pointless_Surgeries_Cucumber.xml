@@ -8,6 +8,7 @@
         <descriptionHyperlinks>
             <RecipeDef>Make_A_Cucumber</RecipeDef>
         </descriptionHyperlinks>
+        
         <graphicData>
             <texPath>Things/PS_Cucumber</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -45,6 +46,7 @@
         <researchPrerequisite>
             <li>PS_Cucumbers</li>
         </researchPrerequisite>
+        
         <products>
             <Cucumber>1</Cucumber>
         </products>
@@ -108,6 +110,11 @@
             <texPath>Things/PS_Supercucumber</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        
         <ingestible>
             <preferability>MealSimple</preferability>
             <ingestEffect>EatVegetarian</ingestEffect>
