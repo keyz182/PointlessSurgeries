@@ -37,9 +37,12 @@
         </graphicData>
         <uiIconScale>1.4</uiIconScale>
         <soundInteract>Interact_Revolver</soundInteract>
+        
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
+            <li>RewardStandardCore</li>
         </thingSetMakerTags>
+        
         <statBases>
             <WorkToMake>4000</WorkToMake>
             <Mass>1.4</Mass>

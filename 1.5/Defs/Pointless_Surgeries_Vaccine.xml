@@ -21,7 +21,12 @@
             <ComponentIndustrial>10</ComponentIndustrial>
         </costList>
         <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
-
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
+        <tradeTags>
+            <li>Drugs</li>
+        </tradeTags>
         <recipeMaker>
             <productCount>5</productCount>
             <researchPrerequisite>PS_CrazyPills</researchPrerequisite>

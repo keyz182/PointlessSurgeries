@@ -21,6 +21,9 @@
         <thingSetMakerTags>
             <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
 
         <recipeMaker>
             <productCount>5</productCount>

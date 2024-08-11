@@ -98,6 +98,9 @@
     <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_Plaque_Gun.xml">
       <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_Plaque_Gun.xml</Link>
     </ReleaseFiles>
+    <ReleaseFiles Update="..\..\Defs\Pointless_Surgeries_RoobyRefreshments.xml">
+      <Link>PointlessSurgeries\1.5\Defs\Pointless_Surgeries_RoobyRefreshments.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
 
 

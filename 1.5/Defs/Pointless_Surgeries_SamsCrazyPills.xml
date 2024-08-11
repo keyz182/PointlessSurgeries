@@ -73,10 +73,23 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.85</drawSize>
         </graphicData>
-        <techLevel>Neolithic</techLevel>
+        <techLevel>Industrial</techLevel>
+        
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
+        
+        <tradeTags>
+            <li>Drugs</li>
+            <li>ItemsMisc</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
         
         <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+            <li>RewardStandardMidFreq</li>
             <li>RewardStandardHighFreq</li>
+            <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         
         <statBases>

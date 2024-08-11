@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="MealLavishBase">
+        <defName>PS_RoobyRefreshment</defName>
+        <label>rooby refreshment</label>
+        <description>Roobys infamous "Rooby Refreshments", doggy treats with a little kick ;-).\n\nBoosts consciousness, moving, workspeed, rest fall rate, and adds a mood buff. Chance for addiction and heart attack.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>PS_Cook_RoobyRefreshment</RecipeDef>
+            <HediffDef>PS_RoobyRefreshment</HediffDef>
+            <HediffDef>WakeUpHigh</HediffDef>
+            <HediffDef>WakeUpAddiction</HediffDef>
+            <HediffDef>HeartAttack</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/PS_RoobyRefreshments</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>100</MarketValue>
+            <WorkToMake>1000</WorkToMake>
+            <Nutrition>1</Nutrition>
+        </statBases>
+
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
+
+        <tradeTags>
+            <li>Drugs</li>
+            <li>ItemsMisc</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+            <li>RewardStandardMidFreq</li>
+            <li>RewardStandardHighFreq</li>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+
+        <comps>
+            <li Class="CompProperties_Drug">
+                <chemical>WakeUp</chemical>
+                <addictiveness>0.005</addictiveness>
+                <existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+                <needLevelOffset>0.2</needLevelOffset>
+                <listOrder>210</listOrder>
+                <overdoseSeverityOffset>0.04~0.08</overdoseSeverityOffset>
+                <largeOverdoseChance>0.001</largeOverdoseChance>
+            </li>
+        </comps>
+        <ingestible>
+            <joyKind>Chemical</joyKind>
+            <joy>0.40</joy>
+            <drugCategory>Hard</drugCategory>
+            <preferability>MealLavish</preferability>
+            <tasteThought>AteRoobyRefreshment</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>WakeUpHigh</hediffDef>
+                    <severity>0.35</severity>
+                    <toleranceChemical>WakeUp</toleranceChemical>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>PS_RoobyRefreshment</hediffDef>
+                    <severity>1</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_OffsetNeed">
+                    <need>Rest</need>
+                    <offset>0.75</offset>
+                    <toleranceChemical>WakeUp</toleranceChemical>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThoughtDef>
+        <defName>AteRoobyRefreshment</defName>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate some rooby refreshments</label>
+                <description>Ruh-roh, ry heart ris racing!</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>AteLavishMeal</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+    <RecipeDef ParentName="CookMealLavishBase">
+        <defName>PS_Cook_RoobyRefreshment</defName>
+        <label>"cook" Rooby Refreshments</label>
+        <description>"Cook" up a fresh batch of Rooby Refreshments!</description>
+        <jobString>"Cooking" Rooby Refreshments.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>WakeUp</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Kibble</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+        </ingredients>
+        <researchPrerequisite>PS_CrazyPills</researchPrerequisite>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>WakeUp</li>
+                <li>Kibble</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <PS_RoobyRefreshment>4</PS_RoobyRefreshment>
+        </products>
+        <displayPriority>300</displayPriority>
+    </RecipeDef>
+
+    <HediffDef>
+        <defName>PS_RoobyRefreshment</defName>
+        <label>rooby refreshed</label>
+        <description>Ri'm reeling ruper refreshed!</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <isBad>false</isBad>
+        <initialSeverity>1</initialSeverity>
+        <duplicationAllowed>false</duplicationAllowed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>refreshed</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

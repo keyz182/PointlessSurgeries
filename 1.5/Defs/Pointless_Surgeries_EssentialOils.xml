@@ -17,6 +17,9 @@
         </costList>
         <thingClass>Pointless_Surgeries.PSMedicine</thingClass>
         
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
         <thingSetMakerTags>
             <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>

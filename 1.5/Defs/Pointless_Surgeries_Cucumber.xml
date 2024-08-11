@@ -111,8 +111,15 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         
+        <tradeTags>
+            <li>FoodMeals</li>
+        </tradeTags>
+        
         <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+            <li>RewardStandardMidFreq</li>
             <li>RewardStandardHighFreq</li>
+            <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         
         <ingestible>
